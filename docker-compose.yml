@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  web:
+    image: nginx
+    ports:
+      - 8053:80
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html
+      - ./auth:/etc/nginx/conf.d
